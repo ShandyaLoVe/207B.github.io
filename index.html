@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>207B 实验室</title>
+    <style>
+        /* 这里是一些基础的 CSS 样式，让页面看起来更整洁。您可以根据需要进行修改。*/
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #f4f4f4;
+            color: #333;
+            padding: 1rem 0;
+            border-bottom: #e0e0e0 1px solid;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        #hero {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 60px 0;
+        }
+        #hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .research-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 页眉和导航栏 -->
+    <header>
+        <div class="container">
+            <h1>207B 实验室</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#research">研究方向</a></li>
+                    <li><a href="#team">团队成员</a></li>
+                    <li><a href="#publications">发表文章</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. 实验室核心介绍 -->
+    <section id="hero">
+        <div class="container">
+            <h2>【在这里写下实验室的核心使命或标语】</h2>
+            <p>【例如：致力于通过前沿技术探索生命的奥秘，推动科学发展。】</p>
+        </div>
+    </section>
+
+    <!-- 3. 关于我们 / 实验室简介 -->
+    <section id="about">
+        <div class="container">
+            <h2>关于我们</h2>
+            <p>
+                【在这里详细介绍您的实验室。例如，实验室的成立背景、主要目标、研究理念、技术平台等。】
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. 新闻动态 -->
+    <section id="news">
+        <div class="container">
+            <h2>新闻动态</h2>
+            <ul>
+                <li>【2025-09-01】: 在这里写下第一条新闻，例如：祝贺某某同学的论文被《期刊名》接收！</li>
+                <li>【2025-08-15】: 在这里写下第二条新闻，例如：实验室迎来新的博士后成员某某某。</li>
+                <!-- 您可以在这里添加更多新闻条目 -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- 5. 主要研究方向 -->
+    <section id="research">
+        <div class="container">
+            <h2>研究方向</h2>
+            <div class="research-grid">
+                <div class="research-item">
+                    <h3>研究方向一</h3>
+                    <p>【在这里填写第一个主要研究方向的简要描述。】</p>
+                </div>
+                <div class="research-item">
+                    <h3>研究方向二</h3>
+                    <p>【在这里填写第二个主要研究方向的简要描述。】</p>
+                </div>
+                <div class="research-item">
+                    <h3>研究方向三</h3>
+                    <p>【在这里填写第三个主要研究方向的简要描述。】</p>
+                </div>
+                <!-- 您可以根据需要添加更多的研究方向 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 团队成员 -->
+    <section id="team">
+        <div class="container">
+            <h2>团队成员</h2>
+            <p>【在这里可以简单介绍团队的组成，例如：我们的团队由充满活力的研究人员组成...】</p>
+            <!-- 示例：如何添加一位成员 -->
+            <div>
+                <h4>【成员姓名】 - 【职位，如：首席研究员/博士后/博士生】</h4>
+                <p>【在这里简要介绍该成员的背景、研究兴趣等。】</p>
+            </div>
+            <hr>
+            <div>
+                <h4>【另一位成员姓名】 - 【职位】</h4>
+                <p>【在这里简要介绍该成员的背景、研究兴趣等。】</p>
+            </div>
+            <!-- 您可以复制上面的<div>...</div>结构来添加更多成员 -->
+        </div>
+    </section>
+
+    <!-- 7. 发表文章 -->
+    <section id="publications">
+        <div class="container">
+            <h2>发表文章</h2>
+            <p>【您可以在这里列出实验室发表的代表性论文。】</p>
+            <ul>
+                <li>
+                    【作者列表】. (【年份】). 【文章标题】. <em>【期刊名称】</em>, 【卷(期)】, 【页码】.
+                </li>
+                <li>
+                    【作者列表】. (【年份】). 【文章标题】. <em>【期刊名称】</em>, 【卷(期)】, 【页码】.
+                </li>
+                <!-- 您可以复制上面的<li>...</li>结构来添加更多文章 -->
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- 8. 页脚与联系方式 -->
+    <footer id="contact">
+        <div class="container">
+            <p>联系我们</p>
+            <p>
+                地址：【请填写您的详细地址】<br>
+                邮箱：<a href="mailto:yourlab@example.com" style="color: #fff;">【yourlab@example.com】</a><br>
+                电话：【您的联系电话】
+            </p>
+            <p>&copy; 2025 207B 实验室. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
