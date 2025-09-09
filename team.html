@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队成员 - 207B 实验室</title>
+    <style>
+        /* 这里的样式与您其他页面的样式应保持一致 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px 0; }
+        header { background: #f4f4f4; color: #333; padding: 1rem 0; border-bottom: #e0e0e0 1px solid; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 24px; }
+        header h1 a { text-decoration: none; color: inherit; }
+        nav ul { padding: 0; list-style: none; margin: 0; }
+        nav ul li { display: inline; margin-left: 20px; }
+        nav a { color: #333; text-decoration: none; font-weight: bold; }
+        section { padding: 40px 0; border-bottom: 1px solid #eee; }
+        footer { background: #333; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+
+        /* 为团队成员页面增加的样式 */
+        .team-member {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* 圆形图片 */
+            margin-right: 20px;
+            object-fit: cover; /* 防止图片变形 */
+        }
+        .member-info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">207B 实验室</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="research.html">研究方向</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="publications.html">发表文章</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="team">
+            <div class="container">
+                <h2>团队成员</h2>
+
+                <!-- 成员一：首席研究员/导师 -->
+                <div class="team-member">
+                    <!-- 提示：将照片文件（如 a.jpg）和 html 文件放在同一目录下，然后修改下面的 src="a.jpg" -->
+                    <img src="【成员一照片的文件名，例如 a.jpg】" alt="【成员一姓名】">
+                    <div class="member-info">
+                        <h3>【成员一姓名】 - 【职位，如：教授、首席研究员】</h3>
+                        <p>【在这里详细介绍该成员的学术背景、研究兴趣、负责方向和联系方式等。可以分段。】</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- 成员二：博士后/博士生 -->
+                <div class="team-member">
+                    <img src="【成员二照片的文件名】" alt="【成员二姓名】">
+                    <div class="member-info">
+                        <h3>【成员二姓名】 - 【职位，如：博士后】</h3>
+                        <p>【介绍该成员的背景和研究方向。】</p>
+                    </div>
+                </div>
+
+                <!-- 您可以根据需要，复制上面的 <div class="team-member">...</div> 结构来添加更多成员 -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>联系我们 | 地址：【您的详细地址】 | 邮箱：<a href="mailto:yourlab@example.com" style="color: #fff;">【yourlab@example.com】</a></p>
+            <p>&copy; 2025 207B 实验室. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
