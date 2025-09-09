@@ -1,47 +1,167 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+        <style>
+        /* --- 基础样式 --- */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background: #fff; }
+        .container { width: 80%; max-width: 1100px; margin: auto; overflow: hidden; padding: 20px 0; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1, h2, h3 { color: #333; }
+        section { padding: 60px 0; }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+
+        /* --- 页眉 & 导航 --- */
+        header { background: #fff; padding: 1rem 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 24px; font-weight: bold; }
+        header h1 a { text-decoration: none; color: inherit; }
+        nav ul { padding: 0; list-style: none; margin: 0; }
+        nav ul li { display: inline; margin-left: 25px; }
+        nav a { font-weight: 500; font-size: 16px; color: #555; }
+        nav a:hover { color: #007bff; text-decoration: none; }
+
+        /* --- 页脚 --- */
+        footer { background: #343a40; color: #fff; text-align: center; padding: 40px 0; }
+        footer a { color: #fff; }
+
+        /* --- 首页 Hero 区域 --- */
+        #hero {
+            background-color: #f8f9fa; /* 浅灰色背景 */
+            text-align: center;
+            padding: 80px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        #hero h2 { font-size: 48px; margin-bottom: 15px; color: #000; border: none; }
+        #hero p { font-size: 18px; color: #666; max-width: 700px; margin: auto; }
+
+        /* --- 通用按钮样式 --- */
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover { background: #0056b3; color: #fff; text-decoration: none; }
+
+        /* --- 网格/卡片布局 (用于首页和研究页) --- */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card h3 { margin-top: 0; border-bottom: none; }
+
+        /* --- 两列布局 (用于关于我们页) --- */
+        .two-column {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .two-column .column-text { flex: 1; }
+        .two-column .column-image { flex: 1; }
+        .two-column img { width: 100%; border-radius: 8px; }
+
+        /* --- 新闻列表 --- */
+        .news-list ul { list-style: none; padding: 0; }
+        .news-list li { padding: 10px 0; border-bottom: 1px dashed #ccc; }
+        .news-list li:last-child { border-bottom: none; }
+        .news-list .date { color: #888; margin-right: 15px; font-family: monospace; }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>207B 实验室 - 首页</title>
-    <!-- 样式代码 <style>...</style> 和之前一样，这里省略 -->
+    <!-- 在这里粘贴上面提供的 <style>...</style> 代码 -->
 </head>
 <body>
 
     <header>
         <div class="container">
-            <!-- 让标题可以点击返回首页 -->
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">207B 实验室</a></h1>
+            <h1><a href="index.html">207B 实验室</a></h1>
             <nav>
                 <ul>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="research.html">研究方向</a></li>
                     <li><a href="team.html">团队成员</a></li>
                     <li><a href="publications.html">发表文章</a></li>
+                    <li><a href="competitions.html">竞赛情况</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- 首页的核心介绍区域 -->
-    <section id="hero">
-        <div class="container">
-            <h2>【在这里写下实验室的核心使命或标语】</h2>
-            <p>【例如：致力于通过前沿技术探索生命的奥秘，推动科学发展。】</p>
-        </div>
-    </section>
+    <main>
+        <!-- 1. 实验室核心使命区域 -->
+        <section id="hero">
+            <div class="container">
+                <h2>【在这里写下宏大的实验室愿景】</h2>
+                <p>【在这里用一两句话详细阐述实验室的核心使命，例如：我们致力于解码复杂的生命系统，通过跨学科研究，为重大疾病的治疗提供创新的解决方案。】</p>
+                <a href="research.html" class="btn">探索我们的研究</a>
+            </div>
+        </section>
 
-    <!-- 首页可以放一个简短的实验室简介和新闻动态 -->
-    <section id="home-intro">
-        <div class="container">
-            <h2>欢迎来到 207B 实验室</h2>
-            <p>【这里可以放一段“关于我们”页面的简短摘要，吸引访问者继续了解。】</p>
-            <a href="about.html">了解更多 &raquo;</a>
-        </div>
-    </section>
+        <!-- 2. 核心领域与快速入口 -->
+        <section id="highlights">
+            <div class="container">
+                <h2 style="text-align: center;">核心领域</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <h3>关于我们</h3>
+                        <p>【简要介绍实验室的背景和理念，吸引访问者点击了解更多。】</p>
+                        <a href="about.html">了解更多 &raquo;</a>
+                    </div>
+                    <div class="card">
+                        <h3>前沿研究</h3>
+                        <p>【简要介绍实验室最重要的研究方向或一个亮点项目。】</p>
+                        <a href="research.html">查看所有方向 &raquo;</a>
+                    </div>
+                    <div class="card">
+                        <h3>优秀团队</h3>
+                        <p>【简单描述团队文化，例如：我们的团队由来自不同背景的优秀研究者组成。】</p>
+                        <a href="team.html">认识我们的团队 &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer id="contact">
-        <!-- 页脚内容和之前一样 -->
+        <!-- 3. 最新动态 -->
+        <section id="news" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center;">最新动态</h2>
+                <div class="news-list">
+                    <ul>
+                        <li><span class="date">【2025.09.01】</span>【在这里写下第一条新闻，例如：祝贺某某同学的论文被《期刊名》接收！】</li>
+                        <li><span class="date">【2025.08.15】</span>【在这里写下第二条新闻，例如：实验室迎来新的博士后成员某某某。】</li>
+                        <li><span class="date">【2025.07.30】</span>【在这里写下第三条新闻，例如：某某教授在国际会议上作特邀报告。】</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>联系我们 | 地址：【您的详细地址】 | 邮箱：<a href="mailto:yourlab@example.com">【yourlab@example.com】</a></p>
+            <p>&copy; 2025 207B 实验室. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>

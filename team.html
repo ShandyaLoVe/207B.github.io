@@ -4,37 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>团队成员 - 207B 实验室</title>
-    <style>
-        /* 这里的样式与您其他页面的样式应保持一致 */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
-        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px 0; }
-        header { background: #f4f4f4; color: #333; padding: 1rem 0; border-bottom: #e0e0e0 1px solid; }
+        <style>
+        /* --- 基础样式 --- */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background: #fff; }
+        .container { width: 80%; max-width: 1100px; margin: auto; overflow: hidden; padding: 20px 0; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1, h2, h3 { color: #333; }
+        section { padding: 60px 0; }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+
+        /* --- 页眉 & 导航 --- */
+        header { background: #fff; padding: 1rem 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
         header .container { display: flex; justify-content: space-between; align-items: center; }
-        header h1 { margin: 0; font-size: 24px; }
+        header h1 { margin: 0; font-size: 24px; font-weight: bold; }
         header h1 a { text-decoration: none; color: inherit; }
         nav ul { padding: 0; list-style: none; margin: 0; }
-        nav ul li { display: inline; margin-left: 20px; }
-        nav a { color: #333; text-decoration: none; font-weight: bold; }
-        section { padding: 40px 0; border-bottom: 1px solid #eee; }
-        footer { background: #333; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
-        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        nav ul li { display: inline; margin-left: 25px; }
+        nav a { font-weight: 500; font-size: 16px; color: #555; }
+        nav a:hover { color: #007bff; text-decoration: none; }
 
-        /* 为团队成员页面增加的样式 */
-        .team-member {
+        /* --- 页脚 --- */
+        footer { background: #343a40; color: #fff; text-align: center; padding: 40px 0; }
+        footer a { color: #fff; }
+
+        /* --- 首页 Hero 区域 --- */
+        #hero {
+            background-color: #f8f9fa; /* 浅灰色背景 */
+            text-align: center;
+            padding: 80px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        #hero h2 { font-size: 48px; margin-bottom: 15px; color: #000; border: none; }
+        #hero p { font-size: 18px; color: #666; max-width: 700px; margin: auto; }
+
+        /* --- 通用按钮样式 --- */
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover { background: #0056b3; color: #fff; text-decoration: none; }
+
+        /* --- 网格/卡片布局 (用于首页和研究页) --- */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card h3 { margin-top: 0; border-bottom: none; }
+
+        /* --- 两列布局 (用于关于我们页) --- */
+        .two-column {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
+            gap: 40px;
+            align-items: center;
         }
-        .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* 圆形图片 */
-            margin-right: 20px;
-            object-fit: cover; /* 防止图片变形 */
-        }
-        .member-info {
-            flex: 1;
-        }
+        .two-column .column-text { flex: 1; }
+        .two-column .column-image { flex: 1; }
+        .two-column img { width: 100%; border-radius: 8px; }
+
+        /* --- 新闻列表 --- */
+        .news-list ul { list-style: none; padding: 0; }
+        .news-list li { padding: 10px 0; border-bottom: 1px dashed #ccc; }
+        .news-list li:last-child { border-bottom: none; }
+        .news-list .date { color: #888; margin-right: 15px; font-family: monospace; }
     </style>
 </head>
 <body>
@@ -48,6 +101,7 @@
                     <li><a href="research.html">研究方向</a></li>
                     <li><a href="team.html">团队成员</a></li>
                     <li><a href="publications.html">发表文章</a></li>
+                    <li><a href="competitions.html">竞赛情况</a></li>
                 </ul>
             </nav>
         </div>

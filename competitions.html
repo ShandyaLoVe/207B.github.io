@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞赛情况 - 207B 实验室</title>
+    <!-- 确保这里的 <style> 代码块与您其他页面的最新版本完全一致 -->
+    <style>
+        /* --- 基础样式 --- */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background: #fff; }
+        .container { width: 80%; max-width: 1100px; margin: auto; overflow: hidden; padding: 20px 0; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1, h2, h3 { color: #333; }
+        section { padding: 60px 0; }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+        /* --- 页眉 & 导航 --- */
+        header { background: #fff; padding: 1rem 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 24px; font-weight: bold; }
+        header h1 a { text-decoration: none; color: inherit; }
+        nav ul { padding: 0; list-style: none; margin: 0; }
+        nav ul li { display: inline; margin-left: 25px; }
+        nav a { font-weight: 500; font-size: 16px; color: #555; }
+        nav a:hover { color: #007bff; text-decoration: none; }
+        /* --- 页脚 --- */
+        footer { background: #343a40; color: #fff; text-align: center; padding: 40px 0; }
+        footer a { color: #fff; }
+        /* --- 网格/卡片布局 --- */
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .card h3 { margin-top: 0; border-bottom: none; color: #007bff; }
+        .card p { margin: 10px 0; }
+        .card img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">207B 实验室</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="research.html">研究方向</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="publications.html">发表文章</a></li>
+                    <!-- 这是新添加的链接 -->
+                    <li><a href="competitions.html">竞赛情况</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="competitions">
+            <div class="container">
+                <h2 style="text-align: center;">竞赛成果</h2>
+                <p style="text-align: center; color: #666;">我们在各类科技竞赛中取得了优异的成绩，展现了扎实的理论基础和卓越的创新实践能力。</p>
+
+                <div class="grid-layout">
+
+                    <!-- 竞赛成果卡片 1 -->
+                    <div class="card">
+                        <!-- 建议放一张团队合影、奖杯或项目截图的照片 -->
+                        <img src="【competition-photo1.jpg】" alt="竞赛图片">
+                        <h3>【奖项名称，如：全国一等奖】</h3>
+                        <p><strong>竞赛名称：</strong>【例如：“挑战杯”大学生课外学术科技作品竞赛】</p>
+                        <p><strong>参赛成员：</strong>【张三、李四、王五】</p>
+                        <p><strong>获奖时间：</strong>【2024年11月】</p>
+                        <a href="【项目或新闻链接】" target="_blank">了解项目详情 &raquo;</a>
+                    </div>
+
+                    <!-- 竞赛成果卡片 2 -->
+                    <div class="card">
+                        <img src="【competition-photo2.jpg】" alt="竞赛图片">
+                        <h3>【奖项名称，如：国际金牌】</h3>
+                        <p><strong>竞赛名称：</strong>【例如：ACM 国际大学生程序设计竞赛】</p>
+                        <p><strong>参赛成员：</strong>【赵六、孙七】</p>
+                        <p><strong>获奖时间：</strong>【2024年5月】</p>
+                        <a href="【项目或新闻链接】" target="_blank">了解项目详情 &raquo;</a>
+                    </div>
+
+                    <!-- 竞赛成果卡片 3 -->
+                    <div class="card">
+                        <img src="【competition-photo3.jpg】" alt="竞赛图片">
+                        <h3>【奖项名称，如：最佳设计奖】</h3>
+                        <p><strong>竞赛名称：</strong>【例如：全国大学生智能汽车竞赛】</p>
+                        <p><strong>参赛成员：</strong>【周八、吴九】</p>
+                        <p><strong>获奖时间：</strong>【2023年8月】</p>
+                        <a href="【项目或新闻链接】" target="_blank">了解项目详情 &raquo;</a>
+                    </div>
+
+                    <!-- 您可以根据需要，复制上面的 <div class="card">...</div> 结构来添加更多竞赛成果 -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>联系我们 | 地址：【您的详细地址】 | 邮箱：<a href="mailto:yourlab@example.com">【yourlab@example.com】</a></p>
+            <p>&copy; 2025 207B 实验室. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
