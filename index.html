@@ -27,10 +27,35 @@
 
         /* --- 首页 Hero 区域 --- */
         #hero {
-            background-color: #f8f9fa; /* 浅灰色背景 */
+            /* background-color: #f8f9fa;  浅灰色背景 */
+            background: url('IPIPClab.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
             text-align: center;
             padding: 80px 0;
             border-bottom: 1px solid #e0e0e0;
+        }
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(270deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+            background-size: 600% 600%;
+            animation: moveGradient 15s ease infinite;
+            z-index: 0;
+        }
+        #hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         #hero h2 { font-size: 48px; margin-bottom: 15px; color: #000; border: none; }
         #hero p { font-size: 18px; color: #666; max-width: 700px; margin: auto; }
@@ -112,9 +137,9 @@
         <!-- 1. 实验室核心使命区域 -->
         <section id="hero">
             <div class="container">
-                <h2>【在这里写下宏大我们207B实验室的愿景】</h2>
-                <p>【在这里用一两句话详细阐述实验室的核心使命】</p>
-                <a href="research.html" class="btn">探索我们的研究</a>
+                <h2 style="font-size: 58px; color: #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);"> Intelligent Perception Control and Information Processing Laboratory </h2>
+                <p style="font-size: 22px; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);"> 在实践中学习更多可能 </p>
+                <a href="research.html" class="btn">探索我们的实验室</a>
             </div>
         </section>
 
@@ -125,17 +150,17 @@
                 <div class="grid-layout">
                     <div class="card">
                         <h3>关于我们</h3>
-                        <p>【简要介绍实验室的背景和理念，吸引访问者点击了解更多。】</p>
+                        <p> 我们实验室位于江苏大学电气信息工程学院，主攻信息与信号处理、模式识别与智能控制等方向，热衷于为本科生提供科研和竞赛的机会。 </p>
                         <a href="about.html">了解更多 &raquo;</a>
                     </div>
                     <div class="card">
-                        <h3>前沿研究</h3>
-                        <p>【简要介绍实验室最重要的研究方向或一个亮点项目。】</p>
+                        <h3>科研竞赛</h3>
+                        <p> 实验室助攻信息与信号处理等相关高水平国A类竞赛，例如全国大学生集成电路创新创业大赛，全国大学生电子设计竞赛等。在一些实验室的项目中有机会发表SCI高水平期刊论文。 </p>
                         <a href="research.html">查看所有方向 &raquo;</a>
                     </div>
                     <div class="card">
                         <h3>优秀团队</h3>
-                        <p>【简单描述团队文化，例如：我们的团队由来自不同背景的优秀研究者组成。】</p>
+                        <p> 我们的实验室由电气学院徐副院长和马海宁老师领导，成员为电院各专业优秀学生。通过往届数据来看，实验室大部分成员都能去国内92高校进一步深造，具有很强的保研考研竞争力。 </p>
                         <a href="team.html">认识我们的团队 &raquo;</a>
                     </div>
                 </div>
@@ -148,9 +173,9 @@
                 <h2 style="text-align: center;">最新动态</h2>
                 <div class="news-list">
                     <ul>
-                        <li><span class="date">【2025.09.01】</span>【在这里写下第一条新闻，例如：祝贺某某同学的论文被《期刊名》接收！】</li>
-                        <li><span class="date">【2025.08.15】</span>【在这里写下第二条新闻，例如：实验室迎来新的博士后成员某某某。】</li>
-                        <li><span class="date">【2025.07.30】</span>【在这里写下第三条新闻，例如：某某教授在国际会议上作特邀报告。】</li>
+                        <li><span class="date">【2025.08.24】</span> 祝贺张瀚文、马轩宇、徐隆资同学荣获全国大学生集成电路创新创业大赛全国二等奖！</li>
+                        <li><span class="date">【2025.08.15】</span> 祝贺宋蕊伶、吴烨同学在全国大学生先进成图技术与产品信息建模创新大赛荣获全国一等奖、二等奖！</li>
+                        <li><span class="date">【2025.07.30】</span> </li>
                     </ul>
                 </div>
             </div>
